@@ -3,6 +3,7 @@ package com.example;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -29,6 +30,12 @@ public class InventarioController {
 
   @FXML
   private TableColumn<?, ?> modeloDispositivo;
+
+  @FXML
+  private MenuItem ordenarFechaAsc;
+
+  @FXML
+  private MenuItem ordenarFechaDesc;
 
   @FXML
   private SplitMenuButton ordenarMenuButton;

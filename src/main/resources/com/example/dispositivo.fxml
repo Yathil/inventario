@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="118.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DISPOSITIVO">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TextField layoutX="262.0" layoutY="91.0" />
+      <Text layoutX="98.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField layoutX="262.0" layoutY="131.0" />
+      <Text layoutX="98.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MARCA">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField layoutX="262.0" layoutY="166.0" />
+      <Text layoutX="97.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODELO">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField layoutX="262.0" layoutY="202.0" />
+      <Text layoutX="97.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIPO">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField layoutX="262.0" layoutY="242.0" />
+      <Text layoutX="96.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA COMPRA">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="96.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRECIO">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField layoutX="262.0" layoutY="281.0" />
+   </children>
+</AnchorPane>
