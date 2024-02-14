@@ -14,15 +14,4 @@ public class Inventario {
     this.rutaImpresion = "";
   }
 
-  public void mostrarDispositivos() {
-    // Implement the logic to display devices
-  }
-
-  public void ordenarDispositivosFecha(int tipoOrdenacion) {
-    // Implement the logic to sort devices by date
-  }
-
-  public void imprimirDispositivos() {
-    // Implement the logic to print devices to a txt file
-  }
 }

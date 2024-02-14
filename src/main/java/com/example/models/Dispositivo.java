@@ -20,17 +20,5 @@ public class Dispositivo {
     this.modelo = modelo;
   }
 
-  public void altaDispositivo() {
-    // Implement the logic here
-  }
-
-  public void bajaDispositivo() {
-    // Implement the logic here
-  }
-
-  public void modificarDispositivo() {
-    // Implement the logic here
-  }
-
   // Getters and Setters for the attributes
 }
