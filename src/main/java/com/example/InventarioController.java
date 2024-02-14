@@ -41,6 +41,9 @@ public class InventarioController {
   private SplitMenuButton ordenarMenuButton;
 
   @FXML
+  private TableColumn<?, ?> precioDispositivo;
+
+  @FXML
   private TableView<?> tablaDispositivos;
 
   @FXML
