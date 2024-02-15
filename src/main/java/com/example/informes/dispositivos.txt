@@ -1,1 +1,3 @@
-Dispositivo fechaCompra: 12/03/2024, id: 1, marca: Asus, modelo: G16, precio:1223.0, tipo:PORTATIL
+Dispositivo fechaCompra: 12/02/2024, id: 1, marca: Asus, modelo: G15, precio:2345.0, tipo:PORTATIL
+Dispositivo fechaCompra: 23/08/2022, id: 2, marca: Aer, modelo: 4G, precio:123.0, tipo:ROUTER
+Dispositivo fechaCompra: 27/09/2019, id: 3, marca: Asus, modelo: Aspire, precio:345.0, tipo:PORTATIL
