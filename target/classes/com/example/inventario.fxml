@@ -9,33 +9,31 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.InventarioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.InventarioController">
    <children>
-      <Text layoutX="24.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DISPOSITIVOS">
+      <Text layoutX="27.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DISPOSITIVOS">
          <font>
             <Font size="25.0" />
          </font>
       </Text>
-      <TableView fx:id="tablaDispositivos" layoutX="24.0" layoutY="48.0" prefHeight="200.0" prefWidth="551.0">
+      <TableView fx:id="tablaDispositivos" layoutX="27.0" layoutY="47.0" prefHeight="200.0" prefWidth="669.0">
         <columns>
           <TableColumn fx:id="idDispositivo" prefWidth="47.999996185302734" text="ID" />
           <TableColumn fx:id="tipoDispositivo" prefWidth="102.00000762939453" text="TIPO" />
-            <TableColumn fx:id="marcaDispositivo" prefWidth="101.33329772949219" text="MARCA" />
-            <TableColumn fx:id="modeloDispositivo" prefWidth="169.33331298828125" text="MODELO" />
-            <TableColumn fx:id="fechaCompraDispositivo" prefWidth="128.66667683919275" text="FECHA COMPRA" />
+            <TableColumn fx:id="marcaDispositivo" prefWidth="126.66667175292969" text="MARCA" />
+            <TableColumn fx:id="modeloDispositivo" prefWidth="144.0" text="MODELO" />
+            <TableColumn fx:id="fechaCompraDispositivo" prefWidth="151.99996948242188" text="FECHA COMPRA" />
+            <TableColumn fx:id="precioDispositivo" prefWidth="93.3333740234375" text="PRECIO" />
         </columns>
       </TableView>
-      <Button fx:id="addButon" layoutX="24.0" layoutY="259.0" mnemonicParsing="false" onAction="#addDispositivo" text="AÑADIR" />
-      <Button fx:id="midificarButton" layoutX="93.0" layoutY="259.0" mnemonicParsing="false" onAction="#modificarDispositivo" text="MODIFICAR" />
-      <SplitMenuButton fx:id="ordenarMenuButton" layoutX="182.0" layoutY="259.0" mnemonicParsing="false" onAction="#ordenarDispositivos" text="ORDENAR">
+      <Button fx:id="addButon" layoutX="27.0" layoutY="260.0" mnemonicParsing="false" onAction="#addDispositivo" text="AÑADIR" />
+      <Button fx:id="midificarButton" layoutX="96.0" layoutY="260.0" mnemonicParsing="false" onAction="#modificarDispositivo" text="MODIFICAR" />
+      <SplitMenuButton fx:id="ordenarMenuButton" layoutX="185.0" layoutY="260.0" mnemonicParsing="false" onAction="#ordenarDispositivos" text="ORDENAR">
         <items>
-          <MenuItem mnemonicParsing="false" text="FECHA" />
-          <MenuItem mnemonicParsing="false" text="TIPO" />
-            <MenuItem mnemonicParsing="false" text="MARCA" />
-            <MenuItem mnemonicParsing="false" text="MODELO" />
+          <MenuItem fx:id="ordenarFechaAsc" mnemonicParsing="false" text="FECHA ASC." />
+          <MenuItem fx:id="ordenarFechaDesc" mnemonicParsing="false" text="FECHA DESC." />
         </items>
       </SplitMenuButton>
-      <Button fx:id="imprimirButton" layoutX="286.0" layoutY="259.0" mnemonicParsing="false" onAction="#imprimirDispositivos" text="IMPRIMIR" />
+      <Button fx:id="imprimirButton" layoutX="289.0" layoutY="260.0" mnemonicParsing="false" onAction="#imprimirDispositivos" text="IMPRIMIR" />
    </children>
 </AnchorPane>
