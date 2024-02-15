@@ -1,35 +1,52 @@
 package com.example;
 
+import java.util.Date;
+
+import com.example.models.Dispositivo;
+import com.example.models.Inventario;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
 public class InventarioController {
 
+  // TABLA DE DISPOSITIVOS
+  @FXML
+  private TableColumn<Dispositivo, Double> precioDispositivo;
+
+  @FXML
+  private TableView<Inventario> tablaDispositivos;
+
+  @FXML
+  private TableColumn<Dispositivo, String> tipoDispositivo;
+  @FXML
+  private TableColumn<Dispositivo, Date> fechaCompraDispositivo;
+
+  @FXML
+  private TableColumn<Dispositivo, String> idDispositivo;
+  @FXML
+  private TableColumn<Dispositivo, String> marcaDispositivo;
+  @FXML
+  private TableColumn<Dispositivo, String> modeloDispositivo;
+
+  // BOTONES
   @FXML
   private Button addButon;
-
-  @FXML
-  private TableColumn<?, ?> fechaCompraDispositivo;
-
-  @FXML
-  private TableColumn<?, ?> idDispositivo;
 
   @FXML
   private Button imprimirButton;
 
   @FXML
-  private TableColumn<?, ?> marcaDispositivo;
-
-  @FXML
   private Button midificarButton;
-
-  @FXML
-  private TableColumn<?, ?> modeloDispositivo;
 
   @FXML
   private MenuItem ordenarFechaAsc;
@@ -41,16 +58,17 @@ public class InventarioController {
   private SplitMenuButton ordenarMenuButton;
 
   @FXML
-  private TableColumn<?, ?> precioDispositivo;
-
-  @FXML
-  private TableView<?> tablaDispositivos;
-
-  @FXML
-  private TableColumn<?, ?> tipoDispositivo;
-
-  @FXML
   void addDispositivo(ActionEvent event) {
+    // Llamar a la ventana de añadir dispositivo
+    try {
+      FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("add_dispositivo.fxml"));
+      Parent root = (Parent) fxmlLoader.load();
+      Stage stage = new Stage();
+      stage.setScene(new Scene(root));
+      stage.show();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
 
   }
 
