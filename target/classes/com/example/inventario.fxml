@@ -28,10 +28,10 @@
       </TableView>
       <Button fx:id="addButon" layoutX="27.0" layoutY="260.0" mnemonicParsing="false" onAction="#addDispositivo" text="AÑADIR" />
       <Button fx:id="midificarButton" layoutX="96.0" layoutY="260.0" mnemonicParsing="false" onAction="#modificarDispositivo" text="MODIFICAR" />
-      <SplitMenuButton fx:id="ordenarMenuButton" layoutX="185.0" layoutY="260.0" mnemonicParsing="false" onAction="#ordenarDispositivos" text="ORDENAR">
+      <SplitMenuButton fx:id="ordenarMenuButton" layoutX="185.0" layoutY="260.0" mnemonicParsing="false" onAction="#ordenarFechaAsc" text="ORDENAR">
         <items>
-          <MenuItem fx:id="ordenarFechaAsc" mnemonicParsing="false" text="FECHA ASC." />
-          <MenuItem fx:id="ordenarFechaDesc" mnemonicParsing="false" text="FECHA DESC." />
+          <MenuItem fx:id="ordenarFechaAsc" mnemonicParsing="false" onAction="#ordenarFechaAsc" text="FECHA ASC." />
+          <MenuItem fx:id="ordenarFechaDesc" mnemonicParsing="false" onAction="#ordenarFechaDesc" text="FECHA DESC." />
         </items>
       </SplitMenuButton>
       <Button fx:id="imprimirButton" layoutX="289.0" layoutY="260.0" mnemonicParsing="false" onAction="#imprimirDispositivos" text="IMPRIMIR" />

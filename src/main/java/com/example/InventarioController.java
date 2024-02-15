@@ -74,16 +74,31 @@ public class InventarioController {
 
   @FXML
   void imprimirDispositivos(ActionEvent event) {
+    // Hacer que se imprima la tabla de dispositivos en un archivo txt en:
+    // src\main\java\com\example\informes\dispositivos.txt
 
   }
 
   @FXML
   void modificarDispositivo(ActionEvent event) {
+    try {
+      FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("modificar_dispositivo.fxml"));
+      Parent root = (Parent) fxmlLoader.load();
+      Stage stage = new Stage();
+      stage.setScene(new Scene(root));
+      stage.show();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  @FXML
+  void ordenarFechaAsc(ActionEvent event) {
 
   }
 
   @FXML
-  void ordenarDispositivos(ActionEvent event) {
+  void ordenarFechaDesc(ActionEvent event) {
 
   }
 
