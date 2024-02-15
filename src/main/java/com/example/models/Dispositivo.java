@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Dispositivo {
   private String id;
-  private Date fechaCompra;
+  private String fechaCompra;
   private double precio;
   private TipoDispositivo tipo;
   private String marca;
@@ -13,7 +13,7 @@ public class Dispositivo {
   public Dispositivo() {
   }
 
-  public Dispositivo(String id, Date fechaCompra, double precio, TipoDispositivo tipo, String marca,
+  public Dispositivo(String id, String fechaCompra, double precio, TipoDispositivo tipo, String marca,
       String modelo) {
     this.id = id;
     this.fechaCompra = fechaCompra;
@@ -31,11 +31,11 @@ public class Dispositivo {
     this.id = id;
   }
 
-  public Date getFechaCompra() {
+  public String getFechaCompra() {
     return fechaCompra;
   }
 
-  public void setFechaCompra(Date fechaCompra) {
+  public void setFechaCompra(String fechaCompra) {
     this.fechaCompra = fechaCompra;
   }
 
@@ -71,6 +71,10 @@ public class Dispositivo {
     this.modelo = modelo;
   }
 
-  // Getters and Setters for the attributes
+  @Override
+  public String toString() {
+    return "Dispositivo fechaCompra: " + fechaCompra + ", id: " + id + ", marca: " + marca + ", modelo: " + modelo
+        + ", precio:" + precio + ", tipo:" + tipo;
+  }
 
 }
