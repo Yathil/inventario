@@ -4,11 +4,42 @@ Este proyecto es una aplicación de inventario que permite gestionar dispositivo
 
 ## Clases
 
-El proyecto consta de dos clases principales:
+El proyecto consta de tres clases principales:
+
+# Modelos
 
 - `Dispositivo`: Esta clase representa un dispositivo con atributos como Identificador, FechaCompra, Precio, Tipo Atributo, Marca, Modelo. También tiene métodos para dar de alta, baja y modificar un dispositivo.
 
-- `Inventario`: Esta clase representa un inventario que contiene una lista de dispositivos. Tiene métodos para mostrar los dispositivos, ordenarlos por fecha y imprimir los detalles de los dispositivos.
+- `TipoDispositivo`: Esta clase enum representa los tipos de dispositivos que se pueden gestionar en el inventario.
+
+- `OnCkClickListener`: Esta clase es un controlador de eventos para la vista principal de la aplicación. Permite añadir un nuevo dispositivo, eliminar un dispositivo existente y modificar un dispositivo existente.
+
+# Controladores
+
+- `ModificarDispositivoController`: Esta clase es el controlador para la vista de modificación de dispositivos. Permite modificar los detalles de un dispositivo existente y actualizar la tabla de dispositivos en la interfaz de usuario.
+
+- `InventarioController`: Esta clase representa el inventario de dispositivos. Tiene métodos para añadir, eliminar y modificar dispositivos. También tiene un método para buscar un dispositivo por su identificador.
+
+-`DispositivoController`: Esta clase es el controlador para la vista de dispositivos. Permite añadir un nuevo dispositivo, eliminar un dispositivo existente y modificar un dispositivo existente.
+
+# Main
+
+- `Main`: Esta clase es la clase principal de la aplicación. Inicia la aplicación y muestra la vista principal.
+
+# Vistas
+
+- `inventario.fxml`: Esta vista muestra una tabla con los dispositivos en el inventario. También tiene botones para añadir, eliminar y modificar dispositivos.
+
+- `modificarDispositivo.fxml`: Esta vista muestra un formulario para modificar los detalles de un dispositivo existente.
+
+- `add_dispositivo.fxml`: Esta vista muestra un formulario para añadir un nuevo dispositivo al inventario.
+
+## Requisitos
+
+Para ejecutar este proyecto, necesitarás tener instalado:
+
+- Java 8 o superior
+- Maven 3.6.3 o superior
 
 ## Cómo ejecutar
 
