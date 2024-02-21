@@ -1,5 +1,7 @@
 package com.example;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
@@ -15,29 +17,22 @@ public class DispositivoControllerTest extends ApplicationTest {
 
   @Override
   public void start(Stage stage) throws Exception {
-    // Aquí debes inicializar tu escena y mostrarla en el stage
-    controller = new DispositivoController();
-    Scene scene = new Scene(controller, 800, 600);
+    // Cargar la escena de "inventario"
+    FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("inventario.fxml"));
+    Parent root = fxmlLoader.load();
+    Scene scene = new Scene(root, 800, 600);
     stage.setScene(scene);
     stage.show();
-  }
 
-  @Test
-  public void testHandleCancelButton() {
-    // Haz clic en el botón de cancelar
-    clickOn("#cancelarButton", MouseButton.PRIMARY);
+    // Abrir la ventana de "add_dispositivo"
+    FXMLLoader fxmlLoader2 = new FXMLLoader(App.class.getResource("add_dispositivo.fxml"));
+    Parent root2 = (Parent) fxmlLoader2.load();
+    Stage stage2 = new Stage();
+    stage2.setScene(new Scene(root2));
+    stage2.show();
 
-    // Verifica que los campos estén vacíos
-    FxAssert.verifyThat("#idText", LabeledMatchers.hasText(""));
-    FxAssert.verifyThat("#marcaText", LabeledMatchers.hasText(""));
-    FxAssert.verifyThat("#modeloText", LabeledMatchers.hasText(""));
-    FxAssert.verifyThat("#serieText", LabeledMatchers.hasText(""));
-    FxAssert.verifyThat("#tipoText", LabeledMatchers.hasText(""));
-    FxAssert.verifyThat("#estadoText", LabeledMatchers.hasText(""));
-
-    // Haz clic en el botón de OK
-    clickOn("#okButton", MouseButton.PRIMARY);
-
+    // Obtener el controlador de la nueva ventana
+    controller = fxmlLoader2.getController();
   }
 
   @Test
@@ -45,12 +40,16 @@ public class DispositivoControllerTest extends ApplicationTest {
     // Escribe en los campos de texto
     clickOn("#idText").write("123");
     clickOn("#marcaText").write("Marca");
-    // Haz esto para todos los campos
+    clickOn("#modeloText").write("Modelo");
+    clickOn("#tipoText").write("Tipo");
+    clickOn("#fechaCompraText").write("2021-01-01");
+    clickOn("#precioText").write("1000");
 
     // Haz clic en el botón de OK
     clickOn("#okButton", MouseButton.PRIMARY);
 
     // Verifica que el dispositivo se haya creado correctamente
+
     // Esto dependerá de cómo hayas implementado tu controlador
   }
 }

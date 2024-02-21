@@ -72,7 +72,13 @@ public class DispositivoController {
     double precio = Double.parseDouble(precioStr);
 
     // convertir String a TipoDispositivo
-    TipoDispositivo tipo = TipoDispositivo.valueOf(tipoStr.toUpperCase());
+    TipoDispositivo tipo;
+    try {
+      tipo = TipoDispositivo.valueOf(tipoStr.toUpperCase());
+    } catch (IllegalArgumentException e) {
+      System.err.println("Tipo de dispositivo no válido: " + tipoStr);
+      return; // Salir del método handleOkButton
+    }
 
     // crear dispositivo
     this.dispositivo = new Dispositivo(id, fechaCompra, precio, tipo, marca, modelo);
